@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;1,6..12,300&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #3c268b, #43899e);
+}
+
+.container {
+    max-width: 800px;
+    min-height: 350px;
+    background: #F5EDEA;
+    margin: 190px auto;
+    border: 8px solid #05BBC3;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 40px;
+}
+
+#quote {
+    text-align: center;
+    font-family: 'Noto Serif', serif;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+#author {
+    position: relative;
+    font-size: 30px;
+    margin-top: 30px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        left: -25px;
+        top: 57%;
+        height: 2px;
+        width: 15px;
+        background: black;
+    }
+}
+
+@media (max-width: 610px) {
+    .container {
+        justify-content: space-between;
+    }
+    #author {
+        font-size: 28px;
+    }
+}
